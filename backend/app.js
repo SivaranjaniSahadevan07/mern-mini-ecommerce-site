@@ -12,14 +12,16 @@ const orders = require('./routes/order');
 
 connectDatabase();
 
-app.use(cors({
-    origin: 'https://webmaxstore-ecommerce-frontend.vercel.app', // Allow only your frontend origin
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Include credentials in the requests if needed
-}));
+app.use(cors());
+
+// app.use(cors({
+//     origin: 'https://webmaxstore-ecommerce-frontend.vercel.app', // Allow only your frontend origin
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true, // Include credentials in the requests if needed
+// }));
+
 app.use(express.json());
 // app.use(cors());
-
 
 app.use('/api/v1',products);
 app.use('/api/v1',orders);
