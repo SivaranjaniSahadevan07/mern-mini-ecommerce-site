@@ -1,42 +1,7 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "app.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "rewrites": [
-        {
-          "source": "/api/v1/products",
-          "destination": "/api/v1/products"
-        },
-        {
-          "source": "/api/v1/orders",
-          "destination": "/api/v1/orders"
-        }
-      ],
-    "headers": [
-      {
-        "source": "/api/v1/products",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "https://webmaxstore-ecommerce-frontend.vercel.app"
-          },
-          {
-            "key": "Access-Control-Allow-Methods",
-            "value": "GET, POST, PUT, DELETE, OPTIONS"
-          },
-          {
-            "key": "Access-Control-Allow-Headers",
-            "value": "Content-Type, Authorization"
-          }
-        ]
-      }
-    ]
+    "public": true,
+    "cleanUrls": true,
+    "trailingSlash": false
   }
-  
-
-
   
