@@ -6,12 +6,6 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
-      {
-        "src": "/api/v1/products",
-        "dest": "/api/v1/products"
-      }
-    ],
     "headers": [
       {
         "source": "/api/v1/products",
